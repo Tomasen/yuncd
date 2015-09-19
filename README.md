@@ -23,5 +23,5 @@
 |         | /del | in: {node_id} |
 |         | /mod |   |
 |         | /ls  |   |
-| /task   | /add | in: {image_id, hook} out: {task_id} |
+| /task   | /add | in: {image_id, arguments, hooks} out: {task_id} |
 |         | /ls  | { []task } |
