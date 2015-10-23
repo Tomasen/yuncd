@@ -1,27 +1,18 @@
-### continuous deployment service for containers
+## Continuous deployment service for containers
 
-* register nodes to service
-* deploy docker images automaticly (or manually)
-* deploy strategies
+### Roadmap
 
-#### Definitions
+#### v0.1
 
-| Name | Explanation |
-| ---- | ----------- |
-| Node   | machine that running docker service |
-| Region | indicate diffrent data center |
-| Task   | sepecified service image |
-| Strategies | auto-scaling, single node, or mass-deployment |
+* register node to controller
+* classify nodes as private/team/public
+* lable nodes with: region, name
+* tag nodes with any custom tag
+* deploy docker image by triger
+	- deploy docker image from private registry
+* deploy stradegy:
+	- deploy to specified node(s)
+	- deploy to all avalible nodes
+	- deploy certain number of node in each region
 
-#### APIs
-
-|   |   |   |
-| --- | --- | --- |
-| /region | /add | in: {desc, geo} out: {region_id} |
-|         | /del | in: {region_id} |
-| /node   | /add | in: {region_id, ip, port, key, desc} out: {node_id} |
-|         | /del | in: {node_id} |
-|         | /mod |   |
-|         | /ls  |   |
-| /task   | /add | in: {image_id, arguments, hooks} out: {task_id} |
-|         | /ls  | { []task } |
+#### 0.2
