@@ -1,2 +1,2 @@
-backend: git-data mysql or dynamodb?
-api: restful or protobuf?
+backend: mysql or dynamodb etc?
+api: restful?
